@@ -1,5 +1,6 @@
 from sales.models import CSV, Position, Sale
 from django.contrib import admin
+from .models import Sale, Position, CSV
 
 # Register your models here.
 admin.site.register(Sale)

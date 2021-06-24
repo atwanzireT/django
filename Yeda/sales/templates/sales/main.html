@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    Sales List
+{% endblock title %}
+{% block content %}
+List View
+<br>
+
+{% for obj in object_list %}
+    {{obj}}<br>
+{% endfor %}
+{% endblock content %}

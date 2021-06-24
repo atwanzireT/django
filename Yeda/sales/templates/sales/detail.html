@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+Detail {{object.transaction_id}}
+{% endblock title %}
+
+{% block content %}
+    <a href="{{obj.get_absolute_url}}">{{object.transaction_id}}</a>
+    <br>
+
+{% endblock content %}
