@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products',
     'profiles',
+    # Third party apps
+    'crispy_forms'
 ]
+
+CRISPY_TEMPLATES_PACK =  'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +60,9 @@ ROOT_URLCONF = 'yedaShop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR/ 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

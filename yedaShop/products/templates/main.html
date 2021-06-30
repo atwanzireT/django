@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+<h2>Products</h2>
+<ul>
+    <div class="row">
+        {% for product in products %}
+            <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{product.image}}" alt="product img">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">${{product.price}}</p>
+                    <a href="#" class="btn btn-primary">Add to Chart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</ul>
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
