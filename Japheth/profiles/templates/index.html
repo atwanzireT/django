@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block headlinks %}
+  <link rel="stylesheet" href="{% static 'assets/css/footer.css' %}">
+{% endblock headlinks %}
+
+{% block content %}
+<br>
+<br>
+<h1>News</h1>
+<div class="row">
+  {% for category in categorys %}
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{category.image_urls}}" alt="Category">
+      <div class="card-body">
+        <h5 class="card-title">{{category.category_name}}</h5>
+        <p class="card-text">{{category.description}}</p>
+        <p class="card-text">{{category.created}}</p>
+        <a href="#" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<br>
+<br>
+<h1>Services</h1>
+<div class="row">
+  {% for service in services %}
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{service.image_urls}}" alt="Category">
+      <div class="card-body">
+        <h5 class="card-title">{{category.category_name}}</h5>
+        <p class="card-text">{{service.description}}</p>
+        <p class="card-text">{{category.created}}</p>
+        <a href="#" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<br>
+<div class="card text-center">
+  <div class="card-footer">
+    Contact Us
+  </div>
+  <div class="card-body">
+    <form>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">With textarea</span>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<div class="footer-dark">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3 item">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">PhotoGraphy</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Advertisement</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-3 item">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 item text">
+          <h3>JAPHETH MEDIA</h3>
+          <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus
+            elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+        </div>
+        <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+              class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+            href="#"><i class="icon ion-social-instagram"></i></a></div>
+      </div>
+      <p class="copyright">Japheth © 2018</p>
+    </div>
+  </footer>
+</div>
+
+{% endblock content %}
